@@ -11,33 +11,33 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="The Dino Duckling" startnode="17" creator="Twine" creator-version="2.3.9" ifid="9BCA3FED-D403-435A-957E-D9740D62E038" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="General Story" tags="" position="568,674" size="100,100">(text-colour: $color)[
+<tw-storydata name="The Dino Duckling" startnode="10" creator="Twine" creator-version="2.3.9" ifid="9BCA3FED-D403-435A-957E-D9740D62E038" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="General Story" tags="" position="568,674" size="100,100">(text-colour: $color)[
 
 There was once a $smallanimal named $name.
 ]
 
-[[Go to School-&gt;School]]</tw-passagedata><tw-passagedata pid="2" name="Go to School" tags="" position="578,906" size="100,100">But he didn&#39;t like being called Little $name.
+[[Go to School-&gt;School]]</tw-passagedata><tw-passagedata pid="2" name="Go to School" tags="" position="1015,797" size="100,100">But he didn&#39;t like being called Little $name.
 
 He always wished to grow older quickly and become as big as his dad. Maybe even bigger!
 
 [[Go to School-&gt;Click for Page 5]]
 [[I don&#39;t want to go to school-&gt;Click for Page 5]]
-</tw-passagedata><tw-passagedata pid="3" name="Click for Page 5" tags="" position="567,1069" size="100,100">As the months passed, Little $name started to like school less and less.
+</tw-passagedata><tw-passagedata pid="3" name="Click for Page 5" tags="" position="1013,647" size="100,100">As the months passed, Little $name started to like school less and less.
 
 All his friends grew bigger and he was still little.
 
-[[Go to Science Lab-&gt;Science Lab]]</tw-passagedata><tw-passagedata pid="4" name="Click for Page 8" tags="" position="836,1224" size="100,100">He showed the class how big a $biganimal would be.
+[[Go to Science Lab-&gt;Science Lab]]</tw-passagedata><tw-passagedata pid="4" name="Click for Page 8" tags="" position="1244,799" size="100,100">He showed the class how big a $biganimal would be.
 
 Little $name really liked the $biganimal. No one could call the $biganimal little.
 
 
 [[Go Ahead-&gt;Click for Page 10]]
-</tw-passagedata><tw-passagedata pid="5" name="Click for Page 10" tags="" position="566,1252" size="100,100">Little $name went back home with an idea. He could become a $biganimal!
+</tw-passagedata><tw-passagedata pid="5" name="Click for Page 10" tags="" position="1245,941" size="100,100">Little $name went back home with an idea. He could become a $biganimal!
 
 If he was a $biganimal, he wouldn&#39;t be called Little $name anymore.
 
 [[Tell Mom-&gt;Click for Page 11]]
-</tw-passagedata><tw-passagedata pid="6" name="Click for Page 11" tags="" position="570,1422" size="100,100">Little $name told his mom what happened in school and what he wanted to be.
+</tw-passagedata><tw-passagedata pid="6" name="Click for Page 11" tags="" position="1012,949" size="100,100">Little $name told his mom what happened in school and what he wanted to be.
 
 (if: $smallanimal is &quot;Duck&quot;)[
 	&quot;How will you become a dinosaur? You have feathers, wings and a beak.&quot;, his mother replied.
@@ -50,15 +50,15 @@ If he was a $biganimal, he wouldn&#39;t be called Little $name anymore.
 	]
 
 [[Now what-&gt;Click for Page 13]]
-</tw-passagedata><tw-passagedata pid="7" name="Click for Page 13" tags="" position="872,1432" size="100,100">Little $name hadn&#39;t thought of that. He started thinking of ways to become a $biganimal.
+</tw-passagedata><tw-passagedata pid="7" name="Click for Page 13" tags="" position="836,956" size="100,100">Little $name hadn&#39;t thought of that. He started thinking of ways to become a $biganimal.
 
 [[Watch Cartoon-&gt;Click for Page 14]]
-</tw-passagedata><tw-passagedata pid="8" name="Click for Page 14" tags="" position="883,1603" size="100,100">After dinner, when he was watching his cartoons, he got the best idea. There was an ad for $biganimal costumes for Halloween.
+</tw-passagedata><tw-passagedata pid="8" name="Click for Page 14" tags="" position="831,1127" size="100,100">After dinner, when he was watching his cartoons, he got the best idea. There was an ad for $biganimal costumes for Halloween.
 
 But he needs $$$ money $$$ to buy costume.
 
 [[What to do now-&gt;Money Options]]
-</tw-passagedata><tw-passagedata pid="9" name="Chores" tags="" position="250,1969" size="100,100">(set: $thief to false)
+(set: $costume to false)</tw-passagedata><tw-passagedata pid="9" name="Chores" tags="" position="252,1456" size="100,100">(set: $thief to false)
 
 You have a Lot of chores to do.
 
@@ -85,23 +85,7 @@ Which chore would you a like to do?
 	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
 ]
 
-(else:)[[[Go back Home-&gt;Home]]]</tw-passagedata><tw-passagedata pid="10" name="Click here for Page 16" tags="" position="78,2275" size="100,100">He learns in school the next day that dinosaurs use &quot;Rawr&quot; to communicate.
-
-[[Click here for Page 17]]</tw-passagedata><tw-passagedata pid="11" name="Click here for Page 17" tags="" position="328,2532" size="100,100">He decides to only speak in Rawr (made up language) and not Quack
-no one understands him &lt;events where he is misunderstood&gt;:
-Tries to order food at lunch and gets something he doesnâ€™t like
-
-[[Click here for Page 18]]</tw-passagedata><tw-passagedata pid="12" name="Click here for Page 18" tags="" position="328,2682" size="100,100">He tries to leave big footprint -- sprains foot.
-
-[[Click here for Page 19]]
-</tw-passagedata><tw-passagedata pid="13" name="Click here for Page 19" tags="" position="328,2832" size="100,100">Is dejected, science teacher shows advantages of being small
-Largeness is relative (to a bug, youâ€™re the dinosaur).
-
-
-3 choices
-1. [[Full dino, meets crazy scientist, turns him into dino]]
-2. [[Only keeps costume, decides being a duck can be fun sometimes]]
-3. [[Tries not to worry so much about being small, tries to convince himself]]</tw-passagedata><tw-passagedata pid="14" name="Full dino, meets crazy scientist, turns him into dino" tags="" position="146,2548" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Only keeps costume, decides being a duck can be fun sometimes" tags="" position="328,2982" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Tries not to worry so much about being small, tries to convince himself" tags="" position="478,2982" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Start" tags="" position="388.5,102" size="100,100">(set: $name to (prompt: &quot;Enter your name: &quot;, &quot;Jack Dorsey&quot;))
+(else:)[(set: $costume to false) [[Go back Home-&gt;Home]]]</tw-passagedata><tw-passagedata pid="10" name="Start" tags="" position="388.5,102" size="100,100">(set: $name to (prompt: &quot;Enter your name: &quot;, &quot;Anonymous&quot;))
 (set: $score to 100)
 
 (text-colour: &quot;blue&quot;)[What Color do you Like ?]
@@ -109,41 +93,41 @@ Largeness is relative (to a bug, youâ€™re the dinosaur).
 (set: $colors to (a: &quot;red&quot;, &quot;purple&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;blue&quot;))
 (dropdown: bind $color, &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, (either: ...$colors))
 
-[[Choose your Animal-&gt;Animal Selection]]</tw-passagedata><tw-passagedata pid="18" name="Animal Selection" tags="" position="396.5,245" size="100,100">(text-colour: $color)[Which of the following animals is your Favourite?]
+[[Choose your Animal-&gt;Animal Selection]]</tw-passagedata><tw-passagedata pid="11" name="Animal Selection" tags="" position="396.5,245" size="100,100">(text-colour: $color)[Which of the following animals is your Favourite?]
 
 [[Elephant]]
 [[Dinosaur]]
 [[Whale]]
 [[Ant]]
 [[Duck]]
-[[Clown-Fish]]</tw-passagedata><tw-passagedata pid="19" name="Elephant" tags="" position="246.5,425" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
+[[Clown-Fish]]</tw-passagedata><tw-passagedata pid="12" name="Elephant" tags="" position="246.5,425" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
 (set: $smallanimal to &quot;Ant&quot;)
 
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="20" name="Dinosaur" tags="" position="396.5,425" size="100,100">(set: $biganimal to &quot;Dinosaur&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="13" name="Dinosaur" tags="" position="396.5,425" size="100,100">(set: $biganimal to &quot;Dinosaur&quot;)
 (set: $smallanimal to &quot;Duck&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="21" name="Whale" tags="" position="546.5,425" size="100,100">(set: $biganimal to &quot;Whale&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="14" name="Whale" tags="" position="546.5,425" size="100,100">(set: $biganimal to &quot;Whale&quot;)
 (set: $smallanimal to &quot;Clownfish&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="22" name="Ant" tags="" position="707.5,431" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="15" name="Ant" tags="" position="707.5,431" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
 (set: $smallanimal to &quot;Ant&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="23" name="Duck" tags="" position="865.5,418" size="100,100">(set: $biganimal to &quot;Dinosaur&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="16" name="Duck" tags="" position="865.5,418" size="100,100">(set: $biganimal to &quot;Dinosaur&quot;)
 (set: $smallanimal to &quot;Duck&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="24" name="Clown-Fish" tags="" position="1071.5,432" size="100,100">(set: $biganimal to &quot;Whale&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="17" name="Clown-Fish" tags="" position="1071.5,432" size="100,100">(set: $biganimal to &quot;Whale&quot;)
 (set: $smallanimal to &quot;Clownfish&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="25" name="School" tags="" position="828,735" size="100,100">Little $name loved school.
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="18" name="School" tags="" position="834,649" size="100,100">Little $name loved school.
 
 He always learned new things and could play with his friends.
 
-[[Get Ready for a new Day]]</tw-passagedata><tw-passagedata pid="26" name="Get Ready for a new Day" tags="" position="828,885" size="100,100">This day, one of the kids at school called him Little $name.
+[[Get Ready for a new Day]]</tw-passagedata><tw-passagedata pid="19" name="Get Ready for a new Day" tags="" position="831,793" size="100,100">This day, one of the kids at school called him Little $name.
 
 Soon everyone started calling him Little $name because he was small.
 
-[[Next Day-&gt;Go to School]]</tw-passagedata><tw-passagedata pid="27" name="Science Lab" tags="" position="833,1071.5" size="100,100">(if: $biganimal is &quot;Dinosaur&quot;)[
+[[Next Day-&gt;Go to School]]</tw-passagedata><tw-passagedata pid="20" name="Science Lab" tags="" position="1243,648.5" size="100,100">(if: $biganimal is &quot;Dinosaur&quot;)[
 	One day, in science class, the teacher introduced them to dinosaurs. &quot;We all came from dinosaurs,&quot; he said.
 	]
 (if: $biganimal is &quot;Elephant&quot;)[
@@ -156,7 +140,7 @@ Soon everyone started calling him Little $name because he was small.
 	]
 
 [[Go Ahead-&gt;Click for Page 8]]
-</tw-passagedata><tw-passagedata pid="28" name="Money Options" tags="" position="644,1750" size="100,100">(set: $chore1 to true)
+</tw-passagedata><tw-passagedata pid="21" name="Money Options" tags="" position="646,1237" size="100,100">(set: $chore1 to true)
 (set: $chore2 to true)
 (set: $chore3 to true)
 (set: $chore4 to true)
@@ -166,38 +150,47 @@ Mother tells you she will give you money, if you do chores. [[Chores-&gt;Chores]
 
 The kids in the neighborhood are thirsty after playing through the summer noon and would pay you if you sold lemonade. [[Sell Lemonade]]
 
-You see Mother&#39;s purse lying around and can simply take the money. [[Take Money-&gt;Steal]]</tw-passagedata><tw-passagedata pid="29" name="Sell Lemonade" tags="" position="642,1882" size="100,100">(set: $lemonades_sold to 0)
+You see Mother&#39;s purse lying around and can simply take the money. [[Take Money-&gt;Steal]]</tw-passagedata><tw-passagedata pid="22" name="Sell Lemonade" tags="" position="644,1369" size="100,100">(set: $lemonades_sold to 0)
 (set: $thief to false)
 
-(goto: &quot;Start Selling&quot;)]</tw-passagedata><tw-passagedata pid="30" name="Steal" tags="" position="1092,1974" size="100,100">(set: $value to $value-10)
+(goto: &quot;Start Selling&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Steal" tags="" position="1094,1461" size="100,100">(set: $value to $value-10)
 
 (set: $thief to true)
 
+(set: $costume to false)
+
 You wear the costume the next day to school. Everyone thinks it&#39;s super cool!
 
-[[Go back Home-&gt;Home]]</tw-passagedata><tw-passagedata pid="31" name="Home" tags="" position="634,2247" size="100,100">They go home and they all like the costume too!
+[[Go back Home-&gt;Home]]</tw-passagedata><tw-passagedata pid="24" name="Home" tags="" position="636,1734" size="100,100">They go home and they all like the costume too!
 
-(if: $thief is true)[
-  Meanwhile, Mom walks in and sheâ€™s sad. She tells everyone that she didnâ€™t have the money to get lunch with her friends. But she was sure she had saved enough money!
+(if: $costume is true)[
+  (if: $thief is true)[
+	Meanwhile, Mom walks in and sheâ€™s sad. She tells everyone that she didnâ€™t have the money to get lunch with her friends. But she was sure she had saved enough money!
 
-  [[Tell Mom &#39;You took money from her purse&#39;]]
+	[[Tell Mom &#39;You took money from her purse&#39;]]
 
-  [[Tells everyone at home that itâ€™s a costume they got from school-&gt;Lie]]
+	[[Tells everyone at home that itâ€™s a costume they got from school-&gt;Lie]]
+  ]
+
+  (if: $thief is false)[
+	  Thrilled you wear the costume everywhere.
+	  [[Learn More about $biganimal-&gt;Watch Discovery Channel]]
+  ]
 ]
 
-(if: $thief is false)[
-	Thrilled you wear the costume everywhere.
-	[[Learn More about $biganimal-&gt;Watch Discovery Channel]]
-]</tw-passagedata><tw-passagedata pid="32" name="Tell Mom &#39;You took money from her purse&#39;" tags="" position="1099,2225" size="100,100">Return costume.
+(else:)[
+	You are Hungry and Tired.
+	[[Get some Food-&gt;Lunch]]
+]</tw-passagedata><tw-passagedata pid="25" name="Tell Mom &#39;You took money from her purse&#39;" tags="" position="1101,1712" size="100,100">Return costume.
 You get Suspended for 3 days.
 
-(link: &quot;--&gt;&quot;)[(goto: &quot;Money Options&quot;)]</tw-passagedata><tw-passagedata pid="33" name="Lie" tags="" position="1096,2101" size="100,100">(set: $value to $value-10)
+(link: &quot;--&gt;&quot;)[(goto: &quot;Money Options&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Lie" tags="" position="1098,1588" size="100,100">(set: $value to $value-10)
 
 Tell everyone at home that itâ€™s a costume they got from school.
 
 Later at Night Mom receives a call from Dan. ToDo: ask best-friends name
 
-[[[Curious to find out about their conversion-&gt;Revealation]]]</tw-passagedata><tw-passagedata pid="34" name="Start Selling" tags="" position="641.5,2044" size="100,100">(set: $customers to (a: &quot;red&quot;, &quot;purple&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;blue&quot;))
+[[[Curious to find out about their conversion-&gt;Revealation]]]</tw-passagedata><tw-passagedata pid="27" name="Start Selling" tags="" position="643.5,1531" size="100,100">(set: $customers to (a: &quot;red&quot;, &quot;purple&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;blue&quot;))
 (set: $customer to (either: ...$customers))
 
 (if: $lemonades_sold &lt; 10)[
@@ -212,15 +205,117 @@ Later at Night Mom receives a call from Dan. ToDo: ask best-friends name
 
 (if: $lemonades_sold &gt;= 10)[
 	You wear the costume the next day to school. Everyone thinks it&#39;s super cool!
-
+	(set: $costume to false)
 	[[Go back Home-&gt;Home]]
-	]</tw-passagedata><tw-passagedata pid="35" name="Revealation" tags="" position="1262,2102" size="100,100">Mom confronts you with the question that Dan didnâ€™t get any costume.
+	]</tw-passagedata><tw-passagedata pid="28" name="Revealation" tags="" position="1264,1589" size="100,100">Mom confronts you with the question that Dan didnâ€™t get any costume.
 
-[[You confess.-&gt;Tell Mom &#39;You took money from her purse&#39;]]</tw-passagedata><tw-passagedata pid="36" name="Watch Discovery Channel" tags="" position="634,2397" size="100,100">You see $biganimal crush $smallanimal.
+[[You confess.-&gt;Tell Mom &#39;You took money from her purse&#39;]]</tw-passagedata><tw-passagedata pid="29" name="Watch Discovery Channel" tags="" position="614,1884" size="100,100">You see $biganimal crush $smallanimal.
 
 You wonder if that is what you should emulate.
 
-[[Go to Playground]]</tw-passagedata><tw-passagedata pid="37" name="Go to Playground" tags="" position="634,2547" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[Go to Playground]]</tw-passagedata><tw-passagedata pid="30" name="Go to Playground" tags="" position="616,2035" size="100,100">You are still Thinking about how $biganimal crush $smallanimal.
+
+[[Stomp on your Friends?-&gt;Ask to stomp]]
+
+[[Play as Usual]]</tw-passagedata><tw-passagedata pid="31" name="Ask to stomp" tags="" position="573,2186" size="100,100">Your Friends are not pleased and tell you not to stomp.
+
+[[Play as Usual]]
+
+[[Stomp all over them anyway!!!-&gt;Stomping Penalty]]
+</tw-passagedata><tw-passagedata pid="32" name="Play as Usual" tags="" position="737,2183" size="100,100">You played for hours, Now you are tired.
+
+[[Play More]]
+
+[[Go Back Home-&gt;Home]]</tw-passagedata><tw-passagedata pid="33" name="Stomping Penalty" tags="" position="556,2331" size="100,100">(set: $value to $value-10)
+
+You feel super strong like a big animal, but don&#39;t feel so good.
+
+Also, One of their friends got hurt and is now crying.
+
+The Teacher notices this and asks you to apologize
+
+[[Apologize]]
+[[Don&#39;t Apologize]]</tw-passagedata><tw-passagedata pid="34" name="Play More" tags="" position="865,2183" size="100,100">You are really Tired.
+
+Also your friends have returned to home.
+
+[[Go Back Home-&gt;Home]]</tw-passagedata><tw-passagedata pid="35" name="Lunch" tags="" position="1035,1861" size="100,100">How do you want to have Lunch?
+
+[[Eat lunch normally-&gt;Good Lunch Choice]]
+[[Eat their own lunch like a big animal!-&gt;Field Trip Info]]
+[[Eat their friendâ€™s lunch! It all belongs to them!-&gt;Lunch Penalty]]
+[[*CHOMP* on their friend!-&gt;Lunch Penalty]]
+
+</tw-passagedata><tw-passagedata pid="36" name="Good Lunch Choice" tags="" position="876,2026" size="100,100">Hey, there is an Ice-Cream Truck on the streets. Let&#39;s get some Ice-Cream.
+
+Finished Your Ice-Cream?
+[[Yes-&gt;Field Trip Info]]
+[[No-&gt;Good Lunch Choice]]</tw-passagedata><tw-passagedata pid="37" name="Field Trip Info" tags="" position="1044,2032" size="100,100">The professor has arranged for all the students in the class to go on a Field Trip.
+
+(if: $biganimal is &quot;Dinosaur&quot;)[
+	You will be visiting the natural history museum to see the remains of the Gigantic Dinosaur.
+	]
+(if: $biganimal is &quot;Elephant&quot;)[
+	You will be visiting the Zoo, to see the might Elephant stomp on the ground.
+	]
+(if: $biganimal is &quot;Whale&quot;)[
+	You will be going to the City Aquarium to witness the mightiness of the whale.
+	]
+
+[[Ask Mom for permission-&gt;Evaluation]]
+
+</tw-passagedata><tw-passagedata pid="38" name="Lunch Penalty" tags="" position="1264,2014" size="100,100">(set: $value to $value-10)
+
+You feel like a big animal who eats whatever they want!
+
+Their friend is hurt, by your behavior.
+
+Teacher notices the abrupt change in your behavior.
+
+What do you want to do?
+[[Give them your food.-&gt;Penalty Good Choice]]
+[[Apologize-&gt;Penalty Good Choice]]
+[[You are a $biganimal, don&#39;t do anything-&gt;Double Penalty]]
+</tw-passagedata><tw-passagedata pid="39" name="Penalty Good Choice" tags="" position="1163,2159" size="100,100">You took the right choice.
+
+You are told to stay away from friends for the day.
+
+[[Next Day-&gt;Lunch]] </tw-passagedata><tw-passagedata pid="40" name="Double Penalty" tags="" position="1313,2159" size="100,100">(set: $value to $value-10)
+
+You are Suspended for 3 Days.
+
+(set: $dayssuspended to 3)
+
+[[Next Day-&gt;suspension]] </tw-passagedata><tw-passagedata pid="41" name="suspension" tags="" position="1292,2313" size="100,100">(if: $dayssuspended &gt; 0)[
+	(set: $dayssuspended to $dayssuspended-1)
+	Just another day in suspension.
+	[[Next Day-&gt;suspension]]
+]
+(else:)[
+	[[Next Day-&gt;Lunch]]
+]</tw-passagedata><tw-passagedata pid="42" name="Evaluation" tags="" position="1044,2182" size="100,100">(if: $value &gt; 80)[
+	Mom Immediately allows you to go on the field Trip and you get to see $biganimal.
+]
+(if: $value &gt; 50)[
+	Mom seems reluctant to allow you to go on the field Trip.
+	(link: &quot;Tell Mom you will be on Best Behavior&quot;)[Mom has agreed to let you go on Field Trip. You get to see $biganimal.]
+]
+(else:)[
+	Mom does not want you to go on the field-trip. You will need to gain her Trust.
+]</tw-passagedata><tw-passagedata pid="43" name="Apologize" tags="" position="383,2141" size="100,100">You took the right choice.
+
+You are told to stay away from friends for the day.
+
+[[Next Day-&gt;Go to Playground]] </tw-passagedata><tw-passagedata pid="44" name="Don&#39;t Apologize" tags="" position="551,2487" size="100,100">You are suspended for a week.
+(set: $dayssuspended to 7)
+[[go home-&gt;suspended]]</tw-passagedata><tw-passagedata pid="45" name="suspended" tags="" position="386,2323" size="100,100">(if: $dayssuspended &gt; 0)[
+	(set: $dayssuspended to $dayssuspended-1)
+	Just another day in suspension.
+	[[Next Day-&gt;suspended]]
+]
+(else:)[
+	[[Next Day-&gt;Go to Playground]]
+]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
