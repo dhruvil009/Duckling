@@ -65,24 +65,24 @@ You have a Lot of chores to do.
 Which chore would you a like to do?
 
 (if: $chore1 is true)[
-	(set: $chore1 to false)
-	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
+
+	(link: &quot;Clean Room&quot;)[(set: $chore1 to false)(goto: &quot;Chores&quot;)]
 ]
 (if: $chore2 is true)[
-	(set: $chore2 to false)
-	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
+
+	(link: &quot;Clean Room&quot;)[(set: $chore2 to false)(goto: &quot;Chores&quot;)]
 ]
 (if: $chore3 is true)[
-	(set: $chore3 to false)
-	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
+
+	(link: &quot;Clean Room&quot;)[(set: $chore3 to false)(goto: &quot;Chores&quot;)]
 ]
 (if: $chore4 is true)[
-	(set: $chore4 to false)
-	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
+
+	(link: &quot;Clean Room&quot;)[(set: $chore4 to false)(goto: &quot;Chores&quot;)]
 ]
 (if: $chore5 is true)[
-	(set: $chore5 to false)
-	(link: &quot;Clean Room&quot;)[(goto: &quot;Chores&quot;)]
+
+	(link: &quot;Clean Room&quot;)[(set: $chore5 to false)(goto: &quot;Chores&quot;)]
 ]
 
 (else:)[(set: $costume to false) [[Go back Home-&gt;Home]]]</tw-passagedata><tw-passagedata pid="10" name="Start" tags="" position="388.5,102" size="100,100">(set: $name to (prompt: &quot;Enter your name: &quot;, &quot;Anonymous&quot;))
@@ -190,20 +190,20 @@ Tell everyone at home that itâ€™s a costume they got from school.
 
 Later at Night Mom receives a call from Dan. ToDo: ask best-friends name
 
-[[[Curious to find out about their conversion-&gt;Revealation]]]</tw-passagedata><tw-passagedata pid="27" name="Start Selling" tags="" position="643.5,1531" size="100,100">(set: $customers to (a: &quot;red&quot;, &quot;purple&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;blue&quot;))
+[[[Curious to find out about their conversion-&gt;Revealation]]]</tw-passagedata><tw-passagedata pid="27" name="Start Selling" tags="" position="643.5,1531" size="100,100">(set: $customers to (a: &quot;Dan&quot;, &quot;Dhruvil&quot;, &quot;Hannah&quot;, &quot;Poorvaja&quot;))
 (set: $customer to (either: ...$customers))
 
-(if: $lemonades_sold &lt; 10)[
+(if: $lemonades_sold &lt; 3)[
 	Here comes $customer for a Lemonade.
 	(set: $lemonades_sold to $lemonades_sold+1)
 	]
 
-(if: $lemonades_sold &lt; 10)[
+(if: $lemonades_sold &lt; 3)[
 	Still need to sell more Lemonades ðŸ˜”.
 	(link: &quot;--&gt;&quot;)[(goto: &quot;Start Selling&quot;)]
 	]
 
-(if: $lemonades_sold &gt;= 10)[
+(if: $lemonades_sold &gt;= 3)[
 	You wear the costume the next day to school. Everyone thinks it&#39;s super cool!
 	(set: $costume to false)
 	[[Go back Home-&gt;Home]]
@@ -306,8 +306,8 @@ You are Suspended for 3 Days.
 
 You are told to stay away from friends for the day.
 
-[[Next Day-&gt;Go to Playground]] </tw-passagedata><tw-passagedata pid="44" name="Don&#39;t Apologize" tags="" position="551,2487" size="100,100">You are suspended for a week.
-(set: $dayssuspended to 7)
+[[Next Day-&gt;Go to Playground]] </tw-passagedata><tw-passagedata pid="44" name="Don&#39;t Apologize" tags="" position="551,2487" size="100,100">You are suspended for a 3 days.
+(set: $dayssuspended to 3)
 [[go home-&gt;suspended]]</tw-passagedata><tw-passagedata pid="45" name="suspended" tags="" position="386,2323" size="100,100">(if: $dayssuspended &gt; 0)[
 	(set: $dayssuspended to $dayssuspended-1)
 	Just another day in suspension.
