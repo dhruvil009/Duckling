@@ -14,7 +14,7 @@
 <tw-storydata name="The Dino Duckling" startnode="24" creator="Twine" creator-version="2.3.9" ifid="9BCA3FED-D403-435A-957E-D9740D62E038" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
   background-color: white;
   color: black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="General Story" tags="" position="570,668.0000000000001" size="100,100">(text-colour: $color)[
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="General Story" tags="" position="570,668" size="100,100">(text-colour: $color)[
 There once was (if: $smallanimal is &#39;Ant&#39;)[an](else:)[a] $smallanimal named $name.
 
 Everyone called them Little $name because they were so small!
@@ -24,13 +24,15 @@ Everyone called them Little $name because they were so small!
 (else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duck.png&quot;&gt;]
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fish.png&quot;&gt;]
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;School]]</tw-passagedata><tw-passagedata pid="2" name="Go to School" tags="" position="1014.3333333333334,797" size="100,100">Maybe there was a way to be as big as Mom and Dad!
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;School]]</tw-passagedata><tw-passagedata pid="2" name="Go to School" tags="" position="1014,797" size="100,100">Maybe there was a way to be as big as Mom and Dad!
 
 Or maybe even BIGGER!
 
 Then no one would call them Little $name!
 
-(image of kid next to Dad, kid is bigger than dad)
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;ant_big.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duck_big.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fish_big.png&quot;&gt;]
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Science Lab]]
 </tw-passagedata><tw-passagedata pid="3" name="Click for Page 8" tags="" position="1244,799" size="100,100">That gave Little $name an idea.
@@ -40,7 +42,7 @@ Maybe if they tried to be more like (if: $biganimal is &quot;Elephant&quot;)[an]
 Or maybe it would at least make everyone *think* they were bigger!
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Click for Page 10]]
-</tw-passagedata><tw-passagedata pid="4" name="Click for Page 10" tags="" position="1245,939.3333333333334" size="100,100">Little $name went home from school that day excited about this new idea!
+</tw-passagedata><tw-passagedata pid="4" name="Click for Page 10" tags="" position="1245,939" size="100,100">Little $name went home from school that day excited about this new idea!
 
 They decided to tell Mom and Dad about their plan to be more like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
@@ -57,41 +59,47 @@ But Little $name really didn&#39;t have any ideas yet.
 For now, they just decided to watch TV until it was time for dinner.
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Click for Page 14]]
-</tw-passagedata><tw-passagedata pid="7" name="Click for Page 14" tags="" position="829.3333333333334,1124.3333333333333" size="100,100">While watching cartoons, Little $name thought of something that gave them a great idea!
+</tw-passagedata><tw-passagedata pid="7" name="Click for Page 14" tags="" position="829,1124" size="100,100">While watching cartoons, Little $name thought of something that gave them a great idea!
 
 Halloween was just around the corner, and everyone would be dressing up in their favorite costumes.
 
 Maybe Little $name could get a costume to make them look like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
 The only challenge was that they didn&#39;t have any money to buy a costume...
+
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;ant_tv_firsttime.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duck_tv_firsttime.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fish_tv_firsttime.png&quot;&gt;]
+
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Money Options]]
-(set: $costume to false)</tw-passagedata><tw-passagedata pid="8" name="Chores" tags="" position="252,1454.3333333333333" size="100,100">{(set: $thief to false)}
+(set: $costume to false)</tw-passagedata><tw-passagedata pid="8" name="Chores" tags="" position="252,1454" size="100,100">{(set: $thief to false)}
 &quot;Here&#39;s a list,&quot; said Dad. &quot;Make sure you get them all done, then I&#39;ll give you the money for your costume.&quot;
 
 {
 (if: $chore1 is true)[
 
-	(link: &quot;Clean Room&quot;)[(set: $chore1 to false)(goto: &quot;Chores&quot;)]
+	(link: &quot;Clean your room&quot;)[(set: $chore1 to false)(goto: &quot;Chores&quot;)]
 ]}
 {(if: $chore2 is true)[
 
-	(link: &quot;Clean Room&quot;)[(set: $chore2 to false)(goto: &quot;Chores&quot;)]
+	(link: &quot;Do the dishes&quot;)[(set: $chore2 to false)(goto: &quot;Chores&quot;)]
 ]}
 {(if: $chore3 is true)[
 
-	(link: &quot;Clean Room&quot;)[(set: $chore3 to false)(goto: &quot;Chores&quot;)]
+	(link: &quot;Clean the car&quot;)[(set: $chore3 to false)(goto: &quot;Chores&quot;)]
 ]}
 {(if: $chore4 is true)[
 
-	(link: &quot;Clean Room&quot;)[(set: $chore4 to false)(goto: &quot;Chores&quot;)]
+	(link: &quot;Sweep the hall&quot;)[(set: $chore4 to false)(goto: &quot;Chores&quot;)]
 ]}
 {(if: $chore5 is true)[
 
-	(link: &quot;Clean Room&quot;)[(set: $chore5 to false)(goto: &quot;Chores&quot;)]
+	(link: &quot;Dust the shelves&quot;)[(set: $chore5 to false)(goto: &quot;Chores&quot;)]
 ]}
 {
 (if: $chore1 is false and $chore2 is false and $chore3 is false and $chore4 is false and $chore5 is false)[(set: $costume to true)(goto: &quot;Chores Done&quot;)]
-}</tw-passagedata><tw-passagedata pid="9" name="NameSelect" tags="" position="626,178.66666666666669" size="100,100">(set: $name to (prompt: &quot;To start, please enter the name you would like the main character to have: &quot;, &quot;Champ&quot;))
+}
+&lt;img src=&quot;chores.png&quot;&gt;</tw-passagedata><tw-passagedata pid="9" name="NameSelect" tags="" position="626,178" size="100,100">(set: $name to (prompt: &quot;To start, please enter the name you would like the main character to have: &quot;, &quot;Champ&quot;))
 (set: $score to 100)
 
 (text-colour: &quot;blue&quot;)[Next, please select your favorite color from the llist.]
@@ -99,7 +107,7 @@ The only challenge was that they didn&#39;t have any money to buy a costume...
 (set: $colors to (a: &quot;red&quot;, &quot;purple&quot;, &quot;orange&quot;, &quot;pink&quot;, &quot;blue&quot;))
 (dropdown: bind $color, &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, (either: ...$colors))
 
-[[Next-&gt;Animal Selection]]</tw-passagedata><tw-passagedata pid="10" name="Animal Selection" tags="" position="396,220.00000000000003" size="100,100">(text-colour: $color)[Finally, you get to choose which animal you want the main character to be!]
+[[Next-&gt;Animal Selection]]</tw-passagedata><tw-passagedata pid="10" name="Animal Selection" tags="" position="396,220" size="100,100">(text-colour: $color)[Finally, you get to choose which animal you want the main character to be!]
 
 [[Ant]]
 [[Duck]]
@@ -113,7 +121,7 @@ The only challenge was that they didn&#39;t have any money to buy a costume...
 [[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="13" name="Whale" tags="" position="546,425" size="100,100">(set: $biganimal to &quot;Whale&quot;)
 (set: $smallanimal to &quot;Clownfish&quot;)
 
-[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="14" name="Ant" tags="" position="707,427.3333333333333" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
+[[Begin your Journey-&gt;General Story]]</tw-passagedata><tw-passagedata pid="14" name="Ant" tags="" position="707,427" size="100,100">(set: $biganimal to &quot;Elephant&quot;)
 (set: $smallanimal to &quot;Ant&quot;)
 (text-colour: $color)[Great choice! The story will be about an Ant who wants to become big like an Elephant.
 
@@ -132,11 +140,15 @@ Great choice! The story will be about a Clownfish who wants to become big like a
 
 &lt;img src=&quot;fish_costume.png&quot;&gt;
 
-Now you&#39;re ready to [[begin the story!-&gt;General Story]]</tw-passagedata><tw-passagedata pid="17" name="School" tags="" position="835.6666666666666,649" size="100,100">Little $name loved school.
+Now you&#39;re ready to [[begin the story!-&gt;General Story]]</tw-passagedata><tw-passagedata pid="17" name="School" tags="" position="835,649" size="100,100">Little $name loved school.
 
 They always got to learn new things and play with their friends!
 
 But while their friends were all starting to become big and strong, Little $name was still...well, little.
+
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;antschool_early.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duckschool_early.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fishschool_early.png&quot;&gt;]
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Get Ready for a new Day]]</tw-passagedata><tw-passagedata pid="18" name="Get Ready for a new Day" tags="" position="831,793" size="100,100">They knew that they would be big and strong someday, but they didn&#39;t want to wait.
 
@@ -147,6 +159,10 @@ They wanted to be big and strong NOW!
 The teacher showed the class just how big (text: $biganimal + &quot;s&quot;) could be.
 
 They would even be too big to fit inside the classroom!
+
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;antschool.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duckschool.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fishschool.png&quot;&gt;]
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Click for Page 8]]
 </tw-passagedata><tw-passagedata pid="20" name="Money Options" tags="" position="643,1105" size="100,100">{(set: $chore1 to true)
@@ -185,7 +201,7 @@ Little $name checked in Mom&#39;s purse and found the exact amount of money that
 	]
 
 (if: $lemonades_sold &gt;= 3)[
-	(set: $costume to true)(goto: &quot;Lemonade Done&quot;)]</tw-passagedata><tw-passagedata pid="24" name="StartMenu" tags="" position="626,26.666666666666668" size="100,100">Welcome to our story!
+	(set: $costume to true)(goto: &quot;Lemonade Done&quot;)]</tw-passagedata><tw-passagedata pid="24" name="StartMenu" tags="" position="626,26" size="100,100">Welcome to our story!
 
 This is a special kind of story where you get to make choices for the main character.
 
@@ -216,23 +232,32 @@ Feel free to make whatever choices you want, and have fun!
 
 &quot;Sure,&quot; replied Dad, &quot;I have some work that you can help with. But it won&#39;t be easy!&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chores]]</tw-passagedata><tw-passagedata pid="28" name="Chores Done" tags="" position="254,1578.3333333333333" size="100,100">&quot;It looks like you finished everything on the list,&quot; said Dad. &quot;Great job! Here&#39;s the money for your costume. You&#39;ve earned it!&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chores]]</tw-passagedata><tw-passagedata pid="28" name="Chores Done" tags="" position="254,1578" size="100,100">&quot;It looks like you finished everything on the list,&quot; said Dad. &quot;Great job! Here&#39;s the money for your costume. You&#39;ve earned it!&quot;
 
 &quot;Whew, that was a lot of work!&quot;, said Little $name. &quot;But it will all be worth it when I get to be big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Costume]]</tw-passagedata><tw-passagedata pid="29" name="Costume" tags="" position="595.3333333333334,1708" size="100,100">(if: $earnMoneySecondTime is false)[And so Little $name bought (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal costume.
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Costume]]</tw-passagedata><tw-passagedata pid="29" name="Costume" tags="" position="595,1708" size="100,100">(if: $earnMoneySecondTime is false)[And so Little $name bought (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal costume.
 
 They were so excited to be big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal that they wore it to school the next day even though it wasn&#39;t Halloween yet!
 
 Everyone in school loved the costume, and Little $name was so happy!
 
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;ant_costume.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duck_costume.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fish_costume.png&quot;&gt;]
+
 (if: $thief is true)[
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Mom Sad]]](else:)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerX]]]]
+
 (else:)[And so Little $name bought (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal costume again, this time with money that they had earned.
 
 They were so excited to be big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal again and they wore the costume to school the next day.
 
 Everyone in school still loved the costume, and Little $name was so happy!
+
+(if: $smallanimal is &quot;Ant&quot;)[&lt;img src=&quot;ant_costume.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;duck_costume.png&quot;&gt;]
+(else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;fish_costume.png&quot;&gt;]
 
 (if: $thief is true)[
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Mom Sad]]](else:)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerX]]]]</tw-passagedata><tw-passagedata pid="30" name="Lemonade Start" tags="" position="630,1380" size="100,100">Little $name gathered some lemons from the kitchen and worked with Mom to make lemonade to sell outside on the sidewalk.
@@ -247,7 +272,7 @@ They made a sign, set up a table, and started selling lemonade to people walking
 
 &quot;I was supposed to buy my friend a present for her birthday today, but I didn&#39;t have enough money.&quot;, she replied. &quot;But I know I saved enough money in my purse...I don&#39;t know what happened to it.&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Mom Confront]]</tw-passagedata><tw-passagedata pid="33" name="FillerX" tags="" position="435.3333333333333,1874.3333333333333" size="100,100">A few days passed and Little $name wore the $biganimal costume everywhere!
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Mom Confront]]</tw-passagedata><tw-passagedata pid="33" name="FillerX" tags="" position="435,1874" size="100,100">A few days passed and Little $name wore the $biganimal costume everywhere!
 
 But they still didn&#39;t feel much bigger, and everyone still called them Little $name.
 
@@ -272,7 +297,7 @@ But they still didn&#39;t feel much bigger, and everyone still called them Littl
 &quot;You know better than to take money without permission&quot;, said Mom. &quot;We&#39;ll have to return that costume so I can get my money back. If you really want the costume that badly, you&#39;ll have to find a way to earn the money to buy it.&quot;
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Earn Money After Stealing]]
-{(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="37" name="Earn Money After Stealing" tags="" position="1181,1386.3333333333333" size="100,100">And so Little $name returned the $biganimal costume and Mom got her money back.
+{(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="37" name="Earn Money After Stealing" tags="" position="1181,1386" size="100,100">And so Little $name returned the $biganimal costume and Mom got her money back.
 
 They would have to come up with another way to get the money to buy the cosutme.
 
@@ -292,15 +317,15 @@ But no one wanted Little $name to stomp around on them.
 &quot;Or I could ask everyone to stomp around on the ground with me! We could all pretend to be big and strong together!&quot; [[All Stomp Together]]
 
 (if: $stomp is false)[
-&quot;But if I really want everyone to see that I&#39;m big and strong, maybe I should stomp around on them even though they told me not to.&quot; [[Stomp on Friends]]]</tw-passagedata><tw-passagedata pid="40" name="Play Nicely" tags="" position="390.3333333333333,2397.6666666666665" size="100,100">&quot;Okay, we don&#39;t need to stomp around like (text: $biganimal + &quot;s&quot;)&quot;, said Little $name. &quot;We can play like normal.&quot;
+&quot;But if I really want everyone to see that I&#39;m big and strong, maybe I should stomp around on them even though they told me not to.&quot; [[Stomp on Friends]]]</tw-passagedata><tw-passagedata pid="40" name="Play Nicely" tags="" position="390,2397" size="100,100">&quot;Okay, we don&#39;t need to stomp around like (text: $biganimal + &quot;s&quot;)&quot;, said Little $name. &quot;We can play like normal.&quot;
 
 Everyone played and had a great time!
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerZ]]</tw-passagedata><tw-passagedata pid="41" name="All Stomp Together" tags="" position="576.9999999999999,2396.0000000000005" size="100,100">&quot;What if we all stomp around together?&quot;, asked Little $name. &quot;Then we can all pretend to be big and strong!&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerZ]]</tw-passagedata><tw-passagedata pid="41" name="All Stomp Together" tags="" position="576,2396" size="100,100">&quot;What if we all stomp around together?&quot;, asked Little $name. &quot;Then we can all pretend to be big and strong!&quot;
 
 Everyone thought that was a great idea, and they all stomped around together and had a great time!
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerZ]]</tw-passagedata><tw-passagedata pid="42" name="Stomp on Friends" tags="" position="740.3333333333334,2372.6666666666665" size="100,100">&quot;Big animals don&#39;t have to listen to little animals!&quot;, declared Little $name. &quot;I&#39;m (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal, so I can stomp on anyone I want!&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;FillerZ]]</tw-passagedata><tw-passagedata pid="42" name="Stomp on Friends" tags="" position="740,2372" size="100,100">&quot;Big animals don&#39;t have to listen to little animals!&quot;, declared Little $name. &quot;I&#39;m (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal, so I can stomp on anyone I want!&quot;
 
 And Little $name proceeded to stomp all over their friends.
 
@@ -314,12 +339,12 @@ When the teacher found out that Little $name had been stomping all over them, sh
 
 &quot;You shouldn&#39;t stomp around on your friends!&quot;, said the teacher. &quot;Now you need to apologize.&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Stomp Response]]</tw-passagedata><tw-passagedata pid="44" name="Stomp Apologize" tags="" position="900.3333333333334,2671" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Stomp Response]]</tw-passagedata><tw-passagedata pid="44" name="Stomp Apologize" tags="" position="900,2671" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
 
 &quot;Thank you for apologizing&quot;, said the teacher. &quot;But you should never have stomped on your friends, so you are not allowed to play during recess tomorrow. You can use that time to think of other, less harmful ways to feel big and strong.&quot;
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Try Again to Play Nice]]
-{(set: $dayssuspended to 1)}</tw-passagedata><tw-passagedata pid="45" name="Stomp Get Over It" tags="" position="1092.0000000000002,2694.3333333333335" size="100,100">&quot;No!&quot;, said Little $name. &quot;Big animals like me can do whatever they want! I can stomp on whoever I want, and everyone needs to just get over it!&quot;
+{(set: $dayssuspended to 1)}</tw-passagedata><tw-passagedata pid="45" name="Stomp Get Over It" tags="" position="1092,2694" size="100,100">&quot;No!&quot;, said Little $name. &quot;Big animals like me can do whatever they want! I can stomp on whoever I want, and everyone needs to just get over it!&quot;
 
 &quot;Goodness!&quot;, gasped the teacher. &quot;Little $name, I cannot believe that you would say such a thing! You are not allowed to play during recess for the next 3 days! I hope you use that time to think about your actions.&quot;
 
@@ -329,7 +354,7 @@ When the teacher found out that Little $name had been stomping all over them, sh
 
 But everyone was still calling them *Little* $name. It was clear that no one thought they were getting any bigger, even though they were trying to look and act like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Cafeteria]]</tw-passagedata><tw-passagedata pid="47" name="Try Again to Play Nice" tags="" position="1033.6666666666667,2515.6666666666665" size="100,100">(if: $dayssuspended is 3)[
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Cafeteria]]</tw-passagedata><tw-passagedata pid="47" name="Try Again to Play Nice" tags="" position="1033,2515" size="100,100">(if: $dayssuspended is 3)[
 	(set: $dayssuspended to $dayssuspended-1)
 	The next day at recess...
 
@@ -349,7 +374,7 @@ But everyone was still calling them *Little* $name. It was clear that no one tho
 
 	&quot;Tomorrow I&#39;ll be allowed to play during recess again&quot;, thought Little $name. &quot;I understand that I shouldn&#39;t stomp on my friends anymore. But I&#39;ll need to think of another way to make everyone realize that I&#39;m big and strong like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
 	[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Ask to Stomp]]
-]</tw-passagedata><tw-passagedata pid="48" name="Cafeteria" tags="" position="603.6666666666666,2912" size="100,100">The next day during lunch, Little $name thought of another way to act more like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal so everyone would think they seemed bigger.
+]</tw-passagedata><tw-passagedata pid="48" name="Cafeteria" tags="" position="603,2912" size="100,100">The next day during lunch, Little $name thought of another way to act more like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal so everyone would think they seemed bigger.
 
 &quot;Hey, everyone&quot;, said Little $name. &quot;I&#39;m going to show you how (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal would eat whatever they want! You&#39;ll be amazed at how big I am after I eat everyone&#39;s food!&quot;
 
@@ -357,11 +382,11 @@ But no one wanted Little $name to eat their food. They were hungry too!
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Ask to Eat]]
 {(set: $chomp to false)
-(set: $eatFriendsFood to false)}</tw-passagedata><tw-passagedata pid="49" name="FillerY" tags="" position="433.66666666666663,2020.9999999999998" size="100,100">Then one day, Little $name saw on TV that sometimes (text: $biganimal + &quot;s&quot;) would stomp around to let other animals know that they were big and strong!
+(set: $eatFriendsFood to false)}</tw-passagedata><tw-passagedata pid="49" name="FillerY" tags="" position="433,2020" size="100,100">Then one day, Little $name saw on TV that sometimes (text: $biganimal + &quot;s&quot;) would stomp around to let other animals know that they were big and strong!
 
 &quot;Maybe it&#39;s not enough just to look like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal&quot;, thought Little $name. &quot;Maybe I need to *act* big too!&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Playground]] </tw-passagedata><tw-passagedata pid="50" name="Ask to Eat" tags="" position="603.6666666666666,3060.3333333333335" size="100,100">(if: $chomp is false and $eatFriendsFood is false)[&quot;This is the last thing I can think of to show everyone that I&#39;m big and strong like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal&quot;, thought Little $name. &quot;What should I do?&quot;]
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Playground]] </tw-passagedata><tw-passagedata pid="50" name="Ask to Eat" tags="" position="603,3060" size="100,100">(if: $chomp is false and $eatFriendsFood is false)[&quot;This is the last thing I can think of to show everyone that I&#39;m big and strong like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal&quot;, thought Little $name. &quot;What should I do?&quot;]
 (else-if: $chomp is true)[&quot;I really shouldn&#39;t chomp on my friends like last time&quot;, thought Little $name. &quot;I should try something else.&quot;]
 (else-if: $eatFriendsFood is true)[&quot;I really shouldn&#39;t eat my friends&#39; food like last time&quot;, thought Little $name. &quot;I should try something else.&quot;]
 
@@ -373,29 +398,29 @@ But no one wanted Little $name to eat their food. They were hungry too!
 &quot;I don&#39;t care what they say&quot;, thought Little $name. &quot;(if: $biganimal is &quot;Elephant&quot;)[An](else:)[A] $biganimal would eat whatever they wanted!&quot; [[Eat everyone&#39;s food -&gt;Eat Friend&#39;s Lunch]]]
 
 (if: $chomp is false)[
-&quot;Everyone&#39;s making me so angry!&quot;, thought Little $name. &quot;I&#39;ll show them how big and strong I am! I&#39;ll even chomp on one of my friends!&quot; [[Chomp on everyone -&gt;Chomp on Friend]]]</tw-passagedata><tw-passagedata pid="51" name="Eat Normally" tags="" position="375.3333333333333,3212" size="100,100">&quot;Let&#39;s just eat like normal&quot;, said Little $name.
+&quot;Everyone&#39;s making me so angry!&quot;, thought Little $name. &quot;I&#39;ll show them how big and strong I am! I&#39;ll even chomp on one of my friends!&quot; [[Chomp on everyone -&gt;Chomp on Friend]]]</tw-passagedata><tw-passagedata pid="51" name="Eat Normally" tags="" position="375,3212" size="100,100">&quot;Let&#39;s just eat like normal&quot;, said Little $name.
 
 Everyone at lunch and talked and had a great time as usual.
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Field Trip Filler]]</tw-passagedata><tw-passagedata pid="52" name="Eat Like Big Animal" tags="" position="528.6666666666666,3212" size="100,100">&quot;What if we all try to eat like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal?&quot;, asked Little $name. &quot;That way we can all pretend to be big and strong!&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Field Trip Filler]]</tw-passagedata><tw-passagedata pid="52" name="Eat Like Big Animal" tags="" position="528,3212" size="100,100">&quot;What if we all try to eat like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal?&quot;, asked Little $name. &quot;That way we can all pretend to be big and strong!&quot;
 
 Everyone thought that was a wonderful idea! They all chomped on their food like (text: $biganimal + &quot;s&quot;) and had a great time!
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Field Trip Filler]] </tw-passagedata><tw-passagedata pid="53" name="Eat Friend&#39;s Lunch" tags="" position="678.6666666666666,3212" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Field Trip Filler]] </tw-passagedata><tw-passagedata pid="53" name="Eat Friend&#39;s Lunch" tags="" position="678,3212" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
 
 And they went around to everyone and ate all of their food!
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Confront]]
 {(set: $eatFriendsFood to true)
 (set: $eatChoice to &quot;food&quot;)
-(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="54" name="Chomp on Friend" tags="" position="828.6666666666666,3212" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
+(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="54" name="Chomp on Friend" tags="" position="828,3212" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
 
 And they went around to everyone and chomped on their hands and arms!
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Confront]]
 {(set: $chomp to true)
 (set: $eatChoice to &quot;chomp&quot;)
-(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="55" name="Chomp Confront" tags="" position="748.6666666666666,3360.333333333333" size="100,100">&quot;See?&quot;, asked Little $name as they (if: $eatChoice is &quot;food&quot;)[gobbled up everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[ran around chomping on everyone]. &quot;Can you see that I&#39;m big and strong just like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal?&quot;
+(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="55" name="Chomp Confront" tags="" position="748,3360" size="100,100">&quot;See?&quot;, asked Little $name as they (if: $eatChoice is &quot;food&quot;)[gobbled up everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[ran around chomping on everyone]. &quot;Can you see that I&#39;m big and strong just like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal?&quot;
 
 (if: $eatChoice is &quot;food&quot;)[***BURRRRRRPPPPP***]
 
@@ -405,18 +430,18 @@ When the teacher found out that Little $name had (if: $eatChoice is &quot;food&q
 
 &quot;You shouldn&#39;t (if: $eatChoice is &quot;food&quot;)[eat your friends&#39; food](else-if: $eatChoice is &quot;chomp&quot;)[chomp on your friends]!&quot;, said the teacher. &quot;Now you need to apologize.&quot;
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Response]]</tw-passagedata><tw-passagedata pid="56" name="Chomp Apologize" tags="" position="688.6666666666665,3672" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Response]]</tw-passagedata><tw-passagedata pid="56" name="Chomp Apologize" tags="" position="688,3672" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
 
 &quot;Thank you for apologizing&quot;, said the teacher. &quot;But you should never have (if: $eatChoice is &quot;food&quot;)[eaten everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[chomped on your friends], so you are going to eat lunch by yourself tomorrow. You can use that time to think of other, less harmful ways to feel big and strong.&quot;
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Try Again to Eat Nicely]]
-{(set: $dayssuspended to 1)}</tw-passagedata><tw-passagedata pid="57" name="Chomp Get Over It" tags="" position="825.3333333333333,3660.333333333333" size="100,100">&quot;No!&quot;, said Little $name. &quot;Big animals like me can do whatever they want! I can eat whatever I want, and everyone needs to just get over it!&quot;
+{(set: $dayssuspended to 1)}</tw-passagedata><tw-passagedata pid="57" name="Chomp Get Over It" tags="" position="825,3660" size="100,100">&quot;No!&quot;, said Little $name. &quot;Big animals like me can do whatever they want! I can eat whatever I want, and everyone needs to just get over it!&quot;
 
 &quot;Goodness!&quot;, gasped the teacher. &quot;Little $name, I cannot believe that you would say such a thing! You are going to eat your lunch alone for the next 3 days! I hope you use that time to think about your actions.&quot;
 
 [[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Try Again to Eat Nicely]]
 {(set: $dayssuspended to 3)
-(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="58" name="Try Again to Eat Nicely" tags="" position="1087,3365.333333333333" size="100,100">(if: $dayssuspended is 3)[
+(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="58" name="Try Again to Eat Nicely" tags="" position="1087,3365" size="100,100">(if: $dayssuspended is 3)[
 	(set: $dayssuspended to $dayssuspended-1)
 	The next day at lunch...
 
@@ -436,27 +461,27 @@ When the teacher found out that Little $name had (if: $eatChoice is &quot;food&q
 
 	&quot;Tomorrow I&#39;ll be allowed to eat lunch with my friends again&quot;, thought Little $name. &quot;I understand that I shouldn&#39;t (if: $eatChoice is &quot;food&quot;)[eat everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[chomp on everyone]. But I&#39;ll need to think of another way to make everyone realize that I&#39;m big and strong like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
 	[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Ask to Eat]]
-]</tw-passagedata><tw-passagedata pid="59" name="Field Trip Filler" tags="" position="455.3333333333333,3523.6666666666665" size="100,100">A few more days passed and Little $name still wore the $biganimal costume everywhere.
+]</tw-passagedata><tw-passagedata pid="59" name="Field Trip Filler" tags="" position="455,3523" size="100,100">A few more days passed and Little $name still wore the $biganimal costume everywhere.
 
 But everyone was still calling them *Little* $name. It was clear that no one thought they were getting any bigger, even though they were trying to look and act like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.
 
-[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Ending Evaluation]]</tw-passagedata><tw-passagedata pid="60" name="Ending Evaluation" tags="" position="458.6666666666667,3673.6666666666665" size="100,100">Then one day, Little $name&#39;s teacher told them that the whole class would be going on a field trip to see (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
+[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Ending Evaluation]]</tw-passagedata><tw-passagedata pid="60" name="Ending Evaluation" tags="" position="458,3673" size="100,100">Then one day, Little $name&#39;s teacher told them that the whole class would be going on a field trip to see (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
 Little $name was so excited! Maybe if (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal thought they were big and strong, everyone else would too!
 
 (if: $value &gt;= -10)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Best Ending]]]
 (else-if: $value &gt;= -40)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Middle Ending]]]
-(else:)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Worst Ending]]]</tw-passagedata><tw-passagedata pid="61" name="Best Ending" tags="" position="307,3823.6666666666665" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
+(else:)[[[&lt;img src=&quot;next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Worst Ending]]]</tw-passagedata><tw-passagedata pid="61" name="Best Ending" tags="" position="307,3823" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
-&quot;Come over here&quot;, said the teacher. &quot;I think you should meet your hero face-to-face because you&#39;ve been such a good student.&quot;</tw-passagedata><tw-passagedata pid="62" name="Middle Ending" tags="" position="457,3823.6666666666665" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
+&quot;Come over here&quot;, said the teacher. &quot;I think you should meet your hero face-to-face because you&#39;ve been such a good student.&quot;</tw-passagedata><tw-passagedata pid="62" name="Middle Ending" tags="" position="457,3823" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
-It was so cool just being near (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal, but it would have been great if they could have gotten a chance to actually talk with them.</tw-passagedata><tw-passagedata pid="63" name="Worst Ending" tags="" position="607,3823.6666666666665" size="100,100">&quot;I&#39;m sorry, Little $name&quot;, said the teacher. &quot;But you&#39;re not allowed to go on the field trip. You need to learn to be respectful.&quot;</tw-passagedata><tw-passagedata pid="64" name="Stomp Response" tags="" position="732,2837.666666666667" size="100,100">&quot;I only stomped on everyone so they would see how big and strong I am&quot;, said Little $name. &quot;That way they will stop calling me *Little* $name.&quot;
+It was so cool just being near (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal, but it would have been great if they could have gotten a chance to actually talk with them.</tw-passagedata><tw-passagedata pid="63" name="Worst Ending" tags="" position="607,3823" size="100,100">&quot;I&#39;m sorry, Little $name&quot;, said the teacher. &quot;But you&#39;re not allowed to go on the field trip. You need to learn to be respectful.&quot;</tw-passagedata><tw-passagedata pid="64" name="Stomp Response" tags="" position="732,2837" size="100,100">&quot;I only stomped on everyone so they would see how big and strong I am&quot;, said Little $name. &quot;That way they will stop calling me *Little* $name.&quot;
 
 &quot;Being big and strong does not mean you hurt your friends&quot;, replied the teacher. &quot;Now, apologize.&quot;
 
 &quot;I really should apologize&quot;, thought Little $name. &quot;I want everyone to think I&#39;m big and strong, but I don&#39;t want to hurt anyone.&quot; [[Apologize for stomping -&gt;Stomp Apologize]]
 
-&quot;No!&quot;, thought Little $name. &quot;Big animals like me can do whatever they want. I don&#39;t have to apologize!&quot; [[Don&#39;t apologize -&gt;Stomp Get Over It]]</tw-passagedata><tw-passagedata pid="65" name="Chomp Response" tags="" position="741.9999999999999,3518.6666666666665" size="100,100">&quot;I only (if: $eatChoice is &quot;food&quot;)[ate everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[chomped on everyone] so they would see how big and strong I am&quot;, said Little $name. &quot;That way they will stop calling me *Little* $name.&quot;
+&quot;No!&quot;, thought Little $name. &quot;Big animals like me can do whatever they want. I don&#39;t have to apologize!&quot; [[Don&#39;t apologize -&gt;Stomp Get Over It]]</tw-passagedata><tw-passagedata pid="65" name="Chomp Response" tags="" position="741,3518" size="100,100">&quot;I only (if: $eatChoice is &quot;food&quot;)[ate everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[chomped on everyone] so they would see how big and strong I am&quot;, said Little $name. &quot;That way they will stop calling me *Little* $name.&quot;
 
 &quot;Being big and strong does not mean you make your friends feel bad&quot;, replied the teacher. &quot;Now, apologize.&quot;
 
