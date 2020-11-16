@@ -1,4 +1,7 @@
-# The Dino Duckling
+# The Dino Duckling 
+
+### Team Elves
+
 ##### A work of interactive fiction for kids in Twine
 
 Authors: Dan Carpenter, Hannah Chipman, Poorvaja Penmetsa, and Dhruvil Shah
