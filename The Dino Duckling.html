@@ -91,34 +91,34 @@ The only challenge was that they didn&#39;t have any money to buy a costume...
 {
 (if: $chore1 is true)[
 
-	(link: &quot;Clean your room&quot;)[(set: $chore1 to false)(goto: &quot;Chores&quot;)]
-](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt;  Clean your room]}
+	(link: &quot;Wash the dishes&quot;)[(set: $chore1 to false)(goto: &quot;Chores&quot;)]
+](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt;  Wash the dishes]}
 {(if: $chore2 is true)[
 
-	(link: &quot;Do the dishes&quot;)[(set: $chore2 to false)(goto: &quot;Chores&quot;)]
-](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt; Do the dishes]}
+	(link: &quot;Sweep the floor&quot;)[(set: $chore2 to false)(goto: &quot;Chores&quot;)]
+](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt; Sweep the floor]}
 {(if: $chore3 is true)[
 
-	(link: &quot;Clean the car&quot;)[(set: $chore3 to false)(goto: &quot;Chores&quot;)]
-](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt; Clean the car]}
+	(link: &quot;Do the laundry&quot;)[(set: $chore3 to false)(goto: &quot;Chores&quot;)]
+](else:)[&lt;img src=&quot;images/checkmark.png&quot; width=15px&gt; Do the laundry]}
 {
 (if: $chore1 is false and $chore2 is false and $chore3 is false)[(set: $costume to true)(goto: &quot;Chores Done&quot;)]
 }
-&lt;img src=&quot;images/chores.png&quot;&gt;</tw-passagedata><tw-passagedata pid="9" name="NameSelect" tags="" position="792.6666666666666,104.66666666666667" size="100,100">{(set: $name to (prompt: &quot;To start, please enter the name you would like the main character to have: &quot;, &quot;Champ&quot;))
+&lt;img src=&quot;images/chores.png&quot;&gt;&lt;img src=&quot;images/broom.png&quot;&gt;&lt;img src=&quot;images/laundry.png&quot;&gt;</tw-passagedata><tw-passagedata pid="9" name="NameSelect" tags="" position="792,104" size="100,100">{(set: $name to (prompt: &quot;To start, please enter the name you would like the main character to have: &quot;, &quot;Champ&quot;))
 (set: $score to 100)
 
 (set: $friendName1 to (prompt: &quot;Now, please enter a name for one of the other characters in the story: &quot;, &quot;Poorvaja&quot;))
 
 (set: $friendName2 to (prompt: &quot;Please enter one more name for a character in the story: &quot;, &quot;Hannah&quot;))}
 
-(goto: &quot;AnimalSelect&quot;)</tw-passagedata><tw-passagedata pid="10" name="Ant" tags="" position="707,425.3333333333333" size="100,100">{(set: $biganimal to &quot;Elephant&quot;)
+(goto: &quot;AnimalSelect&quot;)</tw-passagedata><tw-passagedata pid="10" name="Ant" tags="" position="707,425" size="100,100">{(set: $biganimal to &quot;Elephant&quot;)
 (set: $smallanimal to &quot;Ant&quot;)}\
 Great choice! The story will be about an Ant who wants to become big like an Elephant.
 
 &lt;img src=&quot;images/ant_costume.png&quot;&gt;
 
 Now you&#39;re ready to [[begin the story!-&gt;General Story]]
-</tw-passagedata><tw-passagedata pid="11" name="Duck" tags="" position="862.3333333333334,417" size="100,100">{(set: $biganimal to &quot;Dinosaur&quot;)
+</tw-passagedata><tw-passagedata pid="11" name="Duck" tags="" position="862,417" size="100,100">{(set: $biganimal to &quot;Dinosaur&quot;)
 (set: $smallanimal to &quot;Duck&quot;)}\
 Great choice! The story will be about a Duck who wants to become big like a Dinosaur.
 
@@ -130,7 +130,7 @@ Great choice! The story will be about a Clownfish who wants to become big like a
 
 &lt;img src=&quot;images/fish_costume.png&quot;&gt;
 
-Now you&#39;re ready to [[begin the story!-&gt;General Story]]</tw-passagedata><tw-passagedata pid="13" name="School" tags="" position="835,647.3333333333334" size="100,100">Little $name loved school.
+Now you&#39;re ready to [[begin the story!-&gt;General Story]]</tw-passagedata><tw-passagedata pid="13" name="School" tags="" position="835,647" size="100,100">Little $name loved school.
 
 They always got to learn new things and play with their friends!
 
@@ -233,7 +233,7 @@ Feel free to make whatever choices you want, and have fun!
 (else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;images/duck_livingroom_happy.png&quot;&gt;]
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;images/fishmom_livingroom_happy.png&quot;&gt;]
 
-[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Click for Page 13]]</tw-passagedata><tw-passagedata pid="22" name="Get Money" tags="" position="645.3333333333334,1262" size="100,100">&quot;Hmm...&quot;, thought Little $name.
+[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Click for Page 13]]</tw-passagedata><tw-passagedata pid="22" name="Get Money" tags="" position="645,1262" size="100,100">&quot;Hmm...&quot;, thought Little $name.
 
 &quot;Maybe if I help Dad with some chores, he&#39;ll give me the money.&quot; 
 [[&lt;img src=&quot;images/chores.png&quot;&gt;-&gt;Chores Start]]
@@ -245,7 +245,7 @@ Feel free to make whatever choices you want, and have fun!
 &quot;Or maybe I could check in Mom&#39;s purse to see if there&#39;s any money that she forgot about... Oh! There is some in here! I&#39;m sure no one would notice if I took it...&quot;
 (if: $smallanimal is &quot;Ant&quot;)[[[&lt;img src=&quot;images/ant_choosesteal.png&quot; style=&quot;margin:auto&quot;&gt;-&gt;Steal]]]
 (else-if: $smallanimal is &quot;Duck&quot;)[[[&lt;img src=&quot;images/duck_choosesteal.png&quot; style=&quot;margin:auto&quot;&gt;-&gt;Steal]]]
-(else-if: $smallanimal is &quot;Clownfish&quot;)[[[&lt;img src=&quot;images/fish_choosesteal.png&quot; style=&quot;margin:auto&quot;&gt;-&gt;Steal]]]]</tw-passagedata><tw-passagedata pid="23" name="Chores Start" tags="" position="258.3333333333333,1316" size="100,100">&quot;Dad!&quot;, said Little $name. &quot;Can I help you with some chores to earn money to buy (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal costume for Halloween?&quot;
+(else-if: $smallanimal is &quot;Clownfish&quot;)[[[&lt;img src=&quot;images/fish_choosesteal.png&quot; style=&quot;margin:auto&quot;&gt;-&gt;Steal]]]]</tw-passagedata><tw-passagedata pid="23" name="Chores Start" tags="" position="258,1316" size="100,100">&quot;Dad!&quot;, said Little $name. &quot;Can I help you with some chores to earn money to buy (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal costume for Halloween?&quot;
 
 &quot;Sure,&quot; replied Dad, &quot;I have some work that you can help with. But it won&#39;t be easy!&quot;
 
@@ -253,7 +253,7 @@ Feel free to make whatever choices you want, and have fun!
 (else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;images/duck_dad.png&quot;&gt;]
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;images/fish_dad.png&quot;&gt;]
 
-[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chores]]</tw-passagedata><tw-passagedata pid="24" name="Chores Done" tags="" position="252.33333333333334,1578" size="100,100">&quot;It looks like you finished everything on the list,&quot; said Dad. &quot;Great job! Here&#39;s the money for your costume. You&#39;ve earned it!&quot;
+[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chores]]</tw-passagedata><tw-passagedata pid="24" name="Chores Done" tags="" position="252,1578" size="100,100">&quot;It looks like you finished everything on the list,&quot; said Dad. &quot;Great job! Here&#39;s the money for your costume. You&#39;ve earned it!&quot;
 
 &quot;Whew, that was a lot of work!&quot;, said Little $name. &quot;But it will all be worth it when I get to be big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!&quot;
 
@@ -436,7 +436,7 @@ When the teacher found out that Little $name had been stomping all over them, th
 [[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Try Again to Play Nice]]
 
 {(set: $dayssuspended to 3)
-(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="42" name="FillerZ" tags="" position="433.3333333333333,2677.3333333333335" size="100,100">A few more days passed and Little $name still wore the $biganimal costume everywhere.
+(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="42" name="FillerZ" tags="" position="433,2677" size="100,100">A few more days passed and Little $name still wore the $biganimal costume everywhere.
 
 But everyone was still calling them *Little* $name. It was clear that no one thought they were getting any bigger, even though they were trying to look and act like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.
 
@@ -444,7 +444,7 @@ But everyone was still calling them *Little* $name. It was clear that no one tho
 (else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;images/duck_costume.png&quot;&gt;]
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;images/fish_costume.png&quot;&gt;]
 
-[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Cafeteria]]</tw-passagedata><tw-passagedata pid="43" name="Try Again to Play Nice" tags="" position="1033,2508.3333333333335" size="100,100">(if: $dayssuspended is 3)[
+[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Cafeteria]]</tw-passagedata><tw-passagedata pid="43" name="Try Again to Play Nice" tags="" position="1033,2508" size="100,100">(if: $dayssuspended is 3)[
 	(set: $dayssuspended to $dayssuspended-1)
 	The next day at recess...
 
@@ -543,7 +543,7 @@ And they went around to everyone and ate all of their food!
 
 {(set: $eatFriendsFood to true)
 (set: $eatChoice to &quot;food&quot;)
-(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="50" name="Chomp on Friend" tags="" position="828,3210.3333333333335" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
+(set: $value to $value-10)}</tw-passagedata><tw-passagedata pid="50" name="Chomp on Friend" tags="" position="828,3210" size="100,100">&quot;Big animals like me can eat whatever they want!&quot;, declared Little $name.
 
 And they went around to everyone and chomped on their hands and arms!
 
@@ -569,7 +569,7 @@ When the teacher found out that Little $name had (if: $eatChoice is &quot;food&q
 (else-if: $smallanimal is &quot;Duck&quot;)[&lt;img src=&quot;images/ducklunch_trouble.png&quot;&gt;]
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;images/fishlunch_trouble.png&quot;&gt;]
 
-[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Response]]</tw-passagedata><tw-passagedata pid="52" name="Chomp Apologize" tags="" position="686.3333333333334,3672" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
+[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Chomp Response]]</tw-passagedata><tw-passagedata pid="52" name="Chomp Apologize" tags="" position="686,3672" size="100,100">&quot;I&#39;m sorry, everyone&quot;, said Little $name. &quot;I just want everyone to think I&#39;m big like (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal.&quot;
 
 &quot;Thank you for apologizing&quot;, said the teacher. &quot;But you should never have (if: $eatChoice is &quot;food&quot;)[eaten everyone&#39;s food](else-if: $eatChoice is &quot;chomp&quot;)[chomped on your friends], so you are going to eat lunch by yourself tomorrow. You can use that time to think of other, less harmful ways to feel big and strong.&quot;
 
@@ -624,7 +624,7 @@ When the teacher found out that Little $name had (if: $eatChoice is &quot;food&q
 (else-if: $smallanimal is &quot;Clownfish&quot;)[&lt;img src=&quot;images/fish_sad.png&quot;&gt;]
 
 	[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt;-&gt;Ask to Eat]]
-]</tw-passagedata><tw-passagedata pid="55" name="Field Trip Filler" tags="" position="476,3522.333333333333" size="100,100">&quot;Well, that&#39;s it. I can&#39;t come up with any more ideas to make everyone think I&#39;m big&quot;, thought Little $name.
+]</tw-passagedata><tw-passagedata pid="55" name="Field Trip Filler" tags="" position="476,3522" size="100,100">&quot;Well, that&#39;s it. I can&#39;t come up with any more ideas to make everyone think I&#39;m big&quot;, thought Little $name.
 
 &quot;I don&#39;t know what to do...&quot;
 
@@ -642,7 +642,7 @@ Little $name was so excited! Maybe if (if: $biganimal is &quot;Elephant&quot;)[a
 
 (if: $value &gt;= -10)[[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Best Ending]]]
 (else-if: $value &gt;= -40)[[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Middle Ending]]]
-(else:)[[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Worst Ending]]]</tw-passagedata><tw-passagedata pid="57" name="Best Ending" tags="" position="303.6666666666667,3823" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
+(else:)[[[&lt;img src=&quot;images/next.png&quot; style=&quot;float: right&quot;&gt; -&gt;Worst Ending]]]</tw-passagedata><tw-passagedata pid="57" name="Best Ending" tags="" position="303,3823" size="100,100">Little $name went on the field trip and saw (if: $biganimal is &quot;Elephant&quot;)[an](else:)[a] $biganimal!
 
 &quot;Come over here&quot;, said the teacher. &quot;I think you should meet your hero face-to-face because you&#39;ve been such a good student.&quot;
 
@@ -688,7 +688,7 @@ It was so cool just being near (if: $biganimal is &quot;Elephant&quot;)[an](else
 
 Didn&#39;t like your ending? Want to play again and make different choices?
 
-Then [[click here to restart. -&gt;Restart Game]]</tw-passagedata><tw-passagedata pid="64" name="Restart Game" tags="" position="450,4184" size="100,100">(reload:)</tw-passagedata><tw-passagedata pid="65" name="AnimalSelect" tags="" position="760.3333333333333,228.99999999999991" size="100,100">Finally, you get to choose which animal you want the main character to be!
+Then [[click here to restart. -&gt;Restart Game]]</tw-passagedata><tw-passagedata pid="64" name="Restart Game" tags="" position="450,4184" size="100,100">(reload:)</tw-passagedata><tw-passagedata pid="65" name="AnimalSelect" tags="" position="760,228" size="100,100">Finally, you get to choose which animal you want the main character to be!
 
 Go ahead and click on whichever one you want.
 
